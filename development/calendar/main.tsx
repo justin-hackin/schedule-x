@@ -122,6 +122,7 @@ const calendar = createCalendar({
   //   end: '20:00',
   // },
   // isDark: true,
+  dayBoundaries: { start: "09:00", end: "03:00" },
   callbacks: {
     beforeRender($app) {
       console.log('beforeRender', $app)
