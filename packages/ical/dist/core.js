@@ -10427,6 +10427,21 @@ const externalEventToInternal = (event, config) => {
     .build()
 }
 
+const getUrlFromOccurenceOrEvent = (target) => {
+  var _a, _b
+  const urlProp =
+    (_b =
+      (_a =
+        target === null || target === void 0 ? void 0 : target.component) ===
+        null || _a === void 0
+        ? void 0
+        : _a.jCal[1]) === null || _b === void 0
+      ? void 0
+      : _b.find(([propName]) => {
+          return propName === 'url'
+        })
+  return urlProp ? urlProp[3] : undefined
+}
 class IcalendarPluginImpl {
   constructor(options) {
     Object.defineProperty(this, 'options', {
@@ -10464,6 +10479,7 @@ class IcalendarPluginImpl {
             title: occurrence.item.summary,
             description: occurrence.item.description,
             location: occurrence.item.location,
+            url: getUrlFromOccurenceOrEvent(occurrence),
             start: toDateTimeString(occurrence.startDate.toJSDate()),
             end: toDateTimeString(occurrence.endDate.toJSDate()),
           },
@@ -10482,6 +10498,7 @@ class IcalendarPluginImpl {
             title: event.summary,
             description: event.description,
             location: event.location,
+            url: getUrlFromOccurenceOrEvent(event),
             start: toDateTimeString(event.startDate.toJSDate()),
             end: toDateTimeString(event.endDate.toJSDate()),
           },
