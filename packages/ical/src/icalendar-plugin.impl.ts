@@ -114,9 +114,11 @@ class IcalendarPluginImpl implements PluginBase<string> {
         title: occurrence.item.summary,
         description: occurrence.item.description,
         location: occurrence.item.location,
-        url: getUrlFromOccurrenceOrEvent(occurrence),
         start: toDateTimeString(occurrence.startDate.toJSDate()),
         end: toDateTimeString(occurrence.endDate.toJSDate()),
+        foreignProperties: {
+          url: getUrlFromOccurrenceOrEvent(occurrence),
+        }
       },
       this.$app.config
     )
@@ -129,9 +131,11 @@ class IcalendarPluginImpl implements PluginBase<string> {
         title: event.summary,
         description: event.description,
         location: event.location,
-        url: getUrlFromOccurrenceOrEvent(event),
         start: toDateTimeString(event.startDate.toJSDate()),
         end: toDateTimeString(event.endDate.toJSDate()),
+        foreignProperties: {
+          url: getUrlFromOccurrenceOrEvent(event),
+        }
       },
       this.$app.config
     )
