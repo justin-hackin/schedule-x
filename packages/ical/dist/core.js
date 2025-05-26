@@ -10427,7 +10427,8 @@ const externalEventToInternal = (event, config) => {
     .build()
 }
 
-const getUrlFromOccurenceOrEvent = (target) => {
+// @ts-expect-error untyped
+const getUrlFromOccurrenceOrEvent = (target) => {
   var _a, _b
   const urlProp =
     (_b =
@@ -10479,7 +10480,7 @@ class IcalendarPluginImpl {
             title: occurrence.item.summary,
             description: occurrence.item.description,
             location: occurrence.item.location,
-            url: getUrlFromOccurenceOrEvent(occurrence),
+            url: getUrlFromOccurrenceOrEvent(occurrence),
             start: toDateTimeString(occurrence.startDate.toJSDate()),
             end: toDateTimeString(occurrence.endDate.toJSDate()),
           },
@@ -10498,7 +10499,7 @@ class IcalendarPluginImpl {
             title: event.summary,
             description: event.description,
             location: event.location,
-            url: getUrlFromOccurenceOrEvent(event),
+            url: getUrlFromOccurrenceOrEvent(event),
             start: toDateTimeString(event.startDate.toJSDate()),
             end: toDateTimeString(event.endDate.toJSDate()),
           },
