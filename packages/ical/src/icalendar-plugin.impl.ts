@@ -37,11 +37,7 @@ type ICalEvent = {
 
 // @ts-expect-error untyped
 const getUrlFromOccurrenceOrEvent = (target) => {
-  const urlProp = target?.component?.jCal[1]?.find(([propName]: [string]) => {
-    return propName === 'url'
-  })
-
-  return urlProp ? urlProp[3] : undefined
+  return target?.component?.getFirstPropertyValue('url');
 }
 
 class IcalendarPluginImpl implements PluginBase<string> {
@@ -114,9 +110,9 @@ class IcalendarPluginImpl implements PluginBase<string> {
         title: occurrence.item.summary,
         description: occurrence.item.description,
         location: occurrence.item.location,
-        url: getUrlFromOccurrenceOrEvent(occurrence),
         start: toDateTimeString(occurrence.startDate.toJSDate()),
         end: toDateTimeString(occurrence.endDate.toJSDate()),
+        url: getUrlFromOccurrenceOrEvent(occurrence),
       },
       this.$app.config
     )
@@ -129,9 +125,10 @@ class IcalendarPluginImpl implements PluginBase<string> {
         title: event.summary,
         description: event.description,
         location: event.location,
-        url: getUrlFromOccurrenceOrEvent(event),
         start: toDateTimeString(event.startDate.toJSDate()),
         end: toDateTimeString(event.endDate.toJSDate()),
+        url: getUrlFromOccurrenceOrEvent(event),
+        test: 'boofar',
       },
       this.$app.config
     )
