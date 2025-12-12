@@ -18,11 +18,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '22'  # Change to your required Node.js version
-
       - name: Install dependencies
         run: npm install  # Use yarn or pnpm if that's your package manager
 
