@@ -1,0 +1,172 @@
+.sx__timezone-select {
+  position: relative;
+  font-size: var(--sx-calendar-header-input-font-size);
+}
+.sx__is-calendar-small .sx__timezone-select {
+  display: none;
+}
+
+.sx__timezone-select-label {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 12px;
+  padding: 0 var(--sx-spacing-padding1);
+  background-color: var(--sx-color-background);
+  font-size: 0.75rem;
+  color: var(--sx-color-neutral);
+  line-height: 1rem;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+.is-dark .sx__timezone-select-label {
+  display: none;
+}
+
+.sx__timezone-select-selected-item {
+  height: 100%;
+  width: fit-content;
+  max-width: 320px;
+  padding: var(--sx-spacing-padding3) var(--sx-spacing-padding4);
+  cursor: pointer;
+  border-radius: var(--sx-rounding-extra-small);
+  border: var(--sx-border);
+  display: flex;
+  align-items: center;
+  gap: var(--sx-spacing-padding2);
+}
+.sx__timezone-select-selected-item:hover {
+  background-color: var(--sx-internal-color-light-gray);
+}
+.is-dark .sx__timezone-select-selected-item:hover {
+  background-color: var(--sx-color-surface-container-low);
+}
+.sx__timezone-select-selected-item .gmt-part {
+  font-weight: 500;
+  font-size: var(--sx-font-extra-small);
+  margin-right: var(--sx-spacing-padding2);
+  color: var(--sx-color-neutral);
+  flex-shrink: 0;
+}
+.sx__timezone-select-selected-item .timezone-name {
+  color: var(--sx-color-on-surface-variant);
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  min-width: 0;
+}
+
+.sx__timezone-select-chevron {
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  filter: brightness(0.7);
+  transition: transform 0.2s ease-in-out;
+}
+
+.sx__timezone-select.is-open .sx__timezone-select-chevron {
+  transform: rotate(180deg);
+}
+
+.sx__timezone-select-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 300px;
+  max-height: 400px;
+  box-shadow: var(--sx-box-shadow-level3);
+  background-color: var(--sx-color-background);
+  z-index: var(--sx-calendar-header-popup-z-index);
+  border-radius: var(--sx-rounding-extra-small);
+  border: var(--sx-border);
+  overflow: hidden;
+}
+.is-dark .sx__timezone-select-dropdown {
+  background-color: var(--sx-color-surface-container-high);
+}
+
+.is-dark .sx__timezone-select-search {
+  border-bottom-color: var(--sx-color-outline-variant);
+}
+
+.sx__timezone-select-search-input {
+  width: 100%;
+  padding: var(--sx-spacing-padding3) var(--sx-spacing-padding6);
+  border: none;
+  border-radius: var(--sx-rounding-extra-small);
+  font-size: var(--sx-calendar-header-input-font-size);
+  background-color: var(--sx-color-background);
+  color: var(--sx-color-on-surface);
+}
+.sx__timezone-select-search-input:focus {
+  outline: none;
+  border-color: var(--sx-color-primary);
+}
+.sx__timezone-select-search-input::placeholder {
+  color: var(--sx-color-on-surface-variant);
+}
+.is-dark .sx__timezone-select-search-input {
+  background-color: var(--sx-color-surface-container-high);
+  border-color: var(--sx-color-outline-variant);
+  color: var(--sx-color-on-surface);
+}
+.is-dark .sx__timezone-select-search-input:focus {
+  border-color: var(--sx-color-primary);
+}
+.is-dark .sx__timezone-select-search-input::placeholder {
+  color: var(--sx-color-on-surface-variant);
+}
+
+.sx__timezone-select-items {
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sx__timezone-select-item {
+  padding: var(--sx-spacing-padding4) var(--sx-spacing-padding6);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.sx__timezone-select-item .gmt-part {
+  font-weight: 500;
+  margin-right: var(--sx-spacing-padding2);
+  color: var(--sx-color-neutral);
+  font-size: var(--sx-font-extra-small);
+}
+.sx__timezone-select-item .timezone-name {
+  color: var(--sx-color-on-surface-variant);
+  font-weight: 400;
+}
+.sx__timezone-select-item:hover, .sx__timezone-select-item:focus {
+  background-color: var(--sx-color-primary);
+  color: var(--sx-color-on-primary);
+}
+.sx__timezone-select-item:hover .gmt-part, .sx__timezone-select-item:focus .gmt-part {
+  color: var(--sx-color-on-primary);
+}
+.sx__timezone-select-item:hover .timezone-name, .sx__timezone-select-item:focus .timezone-name {
+  color: var(--sx-color-on-primary);
+}
+.sx__timezone-select-item.is-selected {
+  background-color: var(--sx-color-surface-dim);
+}
+.sx__timezone-select-item.is-selected:hover, .sx__timezone-select-item.is-selected:focus {
+  background-color: var(--sx-color-primary);
+  color: var(--sx-color-on-primary);
+}
+.sx__timezone-select-item.is-focused {
+  background-color: var(--sx-color-primary);
+  color: var(--sx-color-on-primary);
+}
+.sx__timezone-select-item.is-focused .gmt-part {
+  color: var(--sx-color-on-primary);
+}
+.sx__timezone-select-item.is-focused .timezone-name {
+  color: var(--sx-color-on-primary);
+}

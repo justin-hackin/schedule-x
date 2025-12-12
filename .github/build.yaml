@@ -1,0 +1,42 @@
+# Commit
+
+name: Build and Deploy
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+on:
+  push:
+    branches:
+      - build
+      # Change to your default branch name if needed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22'  # Change to your required Node.js version
+
+      - name: Install dependencies
+        run: npm install  # Use yarn or pnpm if that's your package manager
+
+      - name: Build project
+        run: npm run build  # Change to your build command
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "4888331+justin-hackin@users.noreply.github.com"
+          git config --local user.name "GitHub Action"
+          git commit -a -m "Add built files for degit use"
+
+      - name: Push changes
+        if: env.found == 'true'
+        run: git push origin main  # Change to your default branch name if needed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
