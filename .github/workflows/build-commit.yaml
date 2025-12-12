@@ -36,7 +36,6 @@ jobs:
           git commit -a -m "Add built files for degit use"
 
       - name: Push changes
-        if: env.found == 'true'
         run: git push origin main  # Change to your default branch name if needed
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
