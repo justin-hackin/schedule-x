@@ -763,7 +763,7 @@ interface CalendarEventExternal {
         dateGrid?: string;
         monthGrid?: string;
         monthAgenda?: string;
-        list?: string;
+        listEvent?: string;
     };
     _options?: CalendarEventOptions;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -878,7 +878,7 @@ interface CalendarCallbacks {
     onRender?: ($app: CalendarAppSingleton) => void;
     isCalendarSmall?: ($app: CalendarAppSingleton) => boolean;
 }
-type CustomComponentName = "timeGridEvent" | "dateGridEvent" | "monthGridEvent" | "monthAgendaEvent" | "listEvent" | "eventModal" | "headerContentLeftPrepend" | "headerContentLeftAppend" | "headerContentRightPrepend" | "headerContentRightAppend" | "headerContent" | "interactiveModalAdditionalFields" | "weekGridDate" | "weekGridHour" | "monthGridDayName" | "monthGridDate" | string;
+type CustomComponentName = "timeGridEvent" | "dateGridEvent" | "monthGridEvent" | "monthAgendaEvent" | "listEvent" | "listDayHeader" | "listNoEvents" | "eventModal" | "headerContentLeftPrepend" | "headerContentLeftAppend" | "headerContentRightPrepend" | "headerContentRightAppend" | "headerContent" | "interactiveModalAdditionalFields" | "weekGridDate" | "weekGridHour" | "monthGridDayName" | "monthGridDate" | string;
 type CustomComponentFns = {
     [key in CustomComponentName]?: CustomComponentFn;
 };

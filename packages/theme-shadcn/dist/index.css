@@ -1030,6 +1030,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   overflow-y: auto;
   position: relative;
   scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
 }
 
 .sx__list-day {
@@ -1125,13 +1127,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .sx__list-no-events {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: var(--sx-spacing-padding4);
   color: var(--sx-color-neutral);
   font-size: var(--sx-font-extra-small);
   text-align: center;
+  align-self: center;
+  justify-self: center;
 }
 
 .sx__week-grid__time-axis {

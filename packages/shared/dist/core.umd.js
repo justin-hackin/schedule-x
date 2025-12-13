@@ -1,13 +1,8 @@
-;(function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined'
-    ? factory(exports, require('preact/jsx-runtime'))
-    : typeof define === 'function' && define.amd
-      ? define(['exports', 'preact/jsx-runtime'], factory)
-      : ((global =
-          typeof globalThis !== 'undefined' ? globalThis : global || self),
-        factory((global.SXShared = {}), global.jsxRuntime))
-})(this, function (exports, jsxRuntime) {
-  'use strict'
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('preact/jsx-runtime')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'preact/jsx-runtime'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.SXShared = {}, global.jsxRuntime));
+})(this, (function (exports, jsxRuntime) { 'use strict';
 
   /**
    * Origin of SVG: https://www.svgrepo.com/svg/506771/time
@@ -16,40 +11,7 @@
    * Author website: https://www.figma.com/@salahelimam
    * */
   function TimeIcon({ strokeColor }) {
-    return jsxRuntime.jsx(jsxRuntime.Fragment, {
-      children: jsxRuntime.jsxs('svg', {
-        className: 'sx__event-icon',
-        viewBox: '0 0 24 24',
-        fill: 'none',
-        xmlns: 'http://www.w3.org/2000/svg',
-        children: [
-          jsxRuntime.jsx('g', { id: 'SVGRepo_bgCarrier', 'stroke-width': '0' }),
-          jsxRuntime.jsx('g', {
-            id: 'SVGRepo_tracerCarrier',
-            'stroke-linecap': 'round',
-            'stroke-linejoin': 'round',
-          }),
-          jsxRuntime.jsxs('g', {
-            id: 'SVGRepo_iconCarrier',
-            children: [
-              jsxRuntime.jsx('path', {
-                d: 'M12 8V12L15 15',
-                stroke: strokeColor,
-                'stroke-width': '2',
-                'stroke-linecap': 'round',
-              }),
-              jsxRuntime.jsx('circle', {
-                cx: '12',
-                cy: '12',
-                r: '9',
-                stroke: strokeColor,
-                'stroke-width': '2',
-              }),
-            ],
-          }),
-        ],
-      }),
-    })
+      return (jsxRuntime.jsx(jsxRuntime.Fragment, { children: jsxRuntime.jsxs("svg", { className: "sx__event-icon", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: [jsxRuntime.jsx("g", { id: "SVGRepo_bgCarrier", "stroke-width": "0" }), jsxRuntime.jsx("g", { id: "SVGRepo_tracerCarrier", "stroke-linecap": "round", "stroke-linejoin": "round" }), jsxRuntime.jsxs("g", { id: "SVGRepo_iconCarrier", children: [jsxRuntime.jsx("path", { d: "M12 8V12L15 15", stroke: strokeColor, "stroke-width": "2", "stroke-linecap": "round" }), jsxRuntime.jsx("circle", { cx: "12", cy: "12", r: "9", stroke: strokeColor, "stroke-width": "2" })] })] }) }));
   }
 
   /**
@@ -59,37 +21,7 @@
    * Author website: https://www.figma.com/@salahelimam
    * */
   function UserIcon({ strokeColor }) {
-    return jsxRuntime.jsx(jsxRuntime.Fragment, {
-      children: jsxRuntime.jsxs('svg', {
-        className: 'sx__event-icon',
-        viewBox: '0 0 24 24',
-        fill: 'none',
-        xmlns: 'http://www.w3.org/2000/svg',
-        children: [
-          jsxRuntime.jsx('g', { id: 'SVGRepo_bgCarrier', 'stroke-width': '0' }),
-          jsxRuntime.jsx('g', {
-            id: 'SVGRepo_tracerCarrier',
-            'stroke-linecap': 'round',
-            'stroke-linejoin': 'round',
-          }),
-          jsxRuntime.jsxs('g', {
-            id: 'SVGRepo_iconCarrier',
-            children: [
-              jsxRuntime.jsx('path', {
-                d: 'M15 7C15 8.65685 13.6569 10 12 10C10.3431 10 9 8.65685 9 7C9 5.34315 10.3431 4 12 4C13.6569 4 15 5.34315 15 7Z',
-                stroke: strokeColor,
-                'stroke-width': '2',
-              }),
-              jsxRuntime.jsx('path', {
-                d: 'M5 19.5C5 15.9101 7.91015 13 11.5 13H12.5C16.0899 13 19 15.9101 19 19.5V20C19 20.5523 18.5523 21 18 21H6C5.44772 21 5 20.5523 5 20V19.5Z',
-                stroke: strokeColor,
-                'stroke-width': '2',
-              }),
-            ],
-          }),
-        ],
-      }),
-    })
+      return (jsxRuntime.jsx(jsxRuntime.Fragment, { children: jsxRuntime.jsxs("svg", { className: "sx__event-icon", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: [jsxRuntime.jsx("g", { id: "SVGRepo_bgCarrier", "stroke-width": "0" }), jsxRuntime.jsx("g", { id: "SVGRepo_tracerCarrier", "stroke-linecap": "round", "stroke-linejoin": "round" }), jsxRuntime.jsxs("g", { id: "SVGRepo_iconCarrier", children: [jsxRuntime.jsx("path", { d: "M15 7C15 8.65685 13.6569 10 12 10C10.3431 10 9 8.65685 9 7C9 5.34315 10.3431 4 12 4C13.6569 4 15 5.34315 15 7Z", stroke: strokeColor, "stroke-width": "2" }), jsxRuntime.jsx("path", { d: "M5 19.5C5 15.9101 7.91015 13 11.5 13H12.5C16.0899 13 19 15.9101 19 19.5V20C19 20.5523 18.5523 21 18 21H6C5.44772 21 5 20.5523 5 20V19.5Z", stroke: strokeColor, "stroke-width": "2" })] })] }) }));
   }
 
   /**
@@ -99,48 +31,7 @@
    * Author website: https://www.figma.com/@salahelimam
    * */
   function DescriptionIcon({ strokeColor }) {
-    return jsxRuntime.jsx(jsxRuntime.Fragment, {
-      children: jsxRuntime.jsxs('svg', {
-        className: 'sx__event-icon',
-        viewBox: '0 0 24 24',
-        fill: 'none',
-        xmlns: 'http://www.w3.org/2000/svg',
-        children: [
-          jsxRuntime.jsx('g', { id: 'SVGRepo_bgCarrier', 'stroke-width': '0' }),
-          jsxRuntime.jsx('g', {
-            id: 'SVGRepo_tracerCarrier',
-            'stroke-linecap': 'round',
-            'stroke-linejoin': 'round',
-          }),
-          jsxRuntime.jsxs('g', {
-            id: 'SVGRepo_iconCarrier',
-            children: [
-              jsxRuntime.jsx('rect', {
-                x: '4',
-                y: '4',
-                width: '16',
-                height: '16',
-                rx: '3',
-                stroke: strokeColor,
-                'stroke-width': '2',
-              }),
-              jsxRuntime.jsx('path', {
-                d: 'M16 10L8 10',
-                stroke: strokeColor,
-                'stroke-width': '2',
-                'stroke-linecap': 'round',
-              }),
-              jsxRuntime.jsx('path', {
-                d: 'M16 14L8 14',
-                stroke: strokeColor,
-                'stroke-width': '2',
-                'stroke-linecap': 'round',
-              }),
-            ],
-          }),
-        ],
-      }),
-    })
+      return (jsxRuntime.jsx(jsxRuntime.Fragment, { children: jsxRuntime.jsxs("svg", { className: "sx__event-icon", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: [jsxRuntime.jsx("g", { id: "SVGRepo_bgCarrier", "stroke-width": "0" }), jsxRuntime.jsx("g", { id: "SVGRepo_tracerCarrier", "stroke-linecap": "round", "stroke-linejoin": "round" }), jsxRuntime.jsxs("g", { id: "SVGRepo_iconCarrier", children: [jsxRuntime.jsx("rect", { x: "4", y: "4", width: "16", height: "16", rx: "3", stroke: strokeColor, "stroke-width": "2" }), jsxRuntime.jsx("path", { d: "M16 10L8 10", stroke: strokeColor, "stroke-width": "2", "stroke-linecap": "round" }), jsxRuntime.jsx("path", { d: "M16 14L8 14", stroke: strokeColor, "stroke-width": "2", "stroke-linecap": "round" })] })] }) }));
   }
 
   /**
@@ -150,719 +41,588 @@
    * Author website: https://redl.ink/dariush/links?ref=svgrepo.com
    * */
   function LocationPinIcon({ strokeColor }) {
-    return jsxRuntime.jsx(jsxRuntime.Fragment, {
-      children: jsxRuntime.jsxs('svg', {
-        className: 'sx__event-icon',
-        viewBox: '0 0 24 24',
-        fill: 'none',
-        xmlns: 'http://www.w3.org/2000/svg',
-        children: [
-          jsxRuntime.jsx('g', { id: 'SVGRepo_bgCarrier', 'stroke-width': '0' }),
-          jsxRuntime.jsx('g', {
-            id: 'SVGRepo_tracerCarrier',
-            'stroke-linecap': 'round',
-            'stroke-linejoin': 'round',
-          }),
-          jsxRuntime.jsxs('g', {
-            id: 'SVGRepo_iconCarrier',
-            children: [
-              jsxRuntime.jsxs('g', {
-                'clip-path': 'url(#clip0_429_11046)',
-                children: [
-                  jsxRuntime.jsx('rect', {
-                    x: '12',
-                    y: '11',
-                    width: '0.01',
-                    height: '0.01',
-                    stroke: strokeColor,
-                    'stroke-width': '2',
-                    'stroke-linejoin': 'round',
-                  }),
-                  jsxRuntime.jsx('path', {
-                    d: 'M12 22L17.5 16.5C20.5376 13.4624 20.5376 8.53757 17.5 5.5C14.4624 2.46244 9.53757 2.46244 6.5 5.5C3.46244 8.53757 3.46244 13.4624 6.5 16.5L12 22Z',
-                    stroke: strokeColor,
-                    'stroke-width': '2',
-                    'stroke-linejoin': 'round',
-                  }),
-                ],
-              }),
-              jsxRuntime.jsx('defs', {
-                children: jsxRuntime.jsx('clipPath', {
-                  id: 'clip0_429_11046',
-                  children: jsxRuntime.jsx('rect', {
-                    width: '24',
-                    height: '24',
-                    fill: 'white',
-                  }),
-                }),
-              }),
-            ],
-          }),
-        ],
-      }),
-    })
+      return (jsxRuntime.jsx(jsxRuntime.Fragment, { children: jsxRuntime.jsxs("svg", { className: "sx__event-icon", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: [jsxRuntime.jsx("g", { id: "SVGRepo_bgCarrier", "stroke-width": "0" }), jsxRuntime.jsx("g", { id: "SVGRepo_tracerCarrier", "stroke-linecap": "round", "stroke-linejoin": "round" }), jsxRuntime.jsxs("g", { id: "SVGRepo_iconCarrier", children: [jsxRuntime.jsxs("g", { "clip-path": "url(#clip0_429_11046)", children: [jsxRuntime.jsx("rect", { x: "12", y: "11", width: "0.01", height: "0.01", stroke: strokeColor, "stroke-width": "2", "stroke-linejoin": "round" }), jsxRuntime.jsx("path", { d: "M12 22L17.5 16.5C20.5376 13.4624 20.5376 8.53757 17.5 5.5C14.4624 2.46244 9.53757 2.46244 6.5 5.5C3.46244 8.53757 3.46244 13.4624 6.5 16.5L12 22Z", stroke: strokeColor, "stroke-width": "2", "stroke-linejoin": "round" })] }), jsxRuntime.jsx("defs", { children: jsxRuntime.jsx("clipPath", { id: "clip0_429_11046", children: jsxRuntime.jsx("rect", { width: "24", height: "24", fill: "white" }) }) })] })] }) }));
   }
 
   const definePlugin = (name, definition) => {
-    definition.name = name
-    return definition
-  }
+      definition.name = name;
+      return definition;
+  };
 
   class NumberRangeError extends Error {
-    constructor(min, max) {
-      super(`Number must be between ${min} and ${max}.`)
-      Object.defineProperty(this, 'min', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: min,
-      })
-      Object.defineProperty(this, 'max', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: max,
-      })
-    }
+      constructor(min, max) {
+          super(`Number must be between ${min} and ${max}.`);
+          Object.defineProperty(this, "min", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: min
+          });
+          Object.defineProperty(this, "max", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: max
+          });
+      }
   }
 
   const doubleDigit = (number) => {
-    if (number < 0 || number > 99) throw new NumberRangeError(0, 99)
-    return String(number).padStart(2, '0')
-  }
+      if (number < 0 || number > 99)
+          throw new NumberRangeError(0, 99);
+      return String(number).padStart(2, '0');
+  };
 
   const toDateString = (date) => {
-    return `${date.year}-${doubleDigit(date.month)}-${doubleDigit(date.day)}`
-  }
+      return `${date.year}-${doubleDigit(date.month)}-${doubleDigit(date.day)}`;
+  };
   const toTimeString = (date) => {
-    return `${doubleDigit(date.hour)}:${doubleDigit(date.minute)}`
-  }
+      return `${doubleDigit(date.hour)}:${doubleDigit(date.minute)}`;
+  };
   const toDateTimeString = (date) => {
-    return `${toDateString(date)} ${toTimeString(date)}`
-  }
+      return `${toDateString(date)} ${toTimeString(date)}`;
+  };
   const jsDateToTimeString = (date) => {
-    return `${doubleDigit(date.getHours())}:${doubleDigit(date.getMinutes())}`
-  }
+      return `${doubleDigit(date.getHours())}:${doubleDigit(date.getMinutes())}`;
+  };
   /**
    * @deprecated
    *
    * was kept during Temporal migration, to reduce risk in recurrence package, which internally still uses non-Temporal formats
    */
   const __deprecated__jsDateToDateString = (date) => {
-    return `${date.getFullYear()}-${doubleDigit(date.getMonth() + 1)}-${doubleDigit(date.getDate())}`
-  }
+      return `${date.getFullYear()}-${doubleDigit(date.getMonth() + 1)}-${doubleDigit(date.getDate())}`;
+  };
   /**
    * @deprecated
    *
    * was kept during Temporal migration, to reduce risk in recurrence package, which internally still uses non-Temporal formats
    */
   const __deprecated__jsDatetToDateTimeString = (date) => {
-    return `${__deprecated__jsDateToDateString(date)} ${jsDateToTimeString(date)}`
-  }
+      return `${__deprecated__jsDateToDateString(date)} ${jsDateToTimeString(date)}`;
+  };
 
   class InvalidTimeStringError extends Error {
-    constructor(timeString) {
-      super(`Invalid time string: ${timeString}`)
-    }
+      constructor(timeString) {
+          super(`Invalid time string: ${timeString}`);
+      }
   }
 
   // regex for strings between 00:00 and 23:59
-  const timeStringRegex = /^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]/
-  const dateStringRegex = /^(\d{4})-(\d{2})-(\d{2})$/
+  const timeStringRegex = /^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]/;
+  const dateStringRegex = /^(\d{4})-(\d{2})-(\d{2})$/;
 
-  const minuteTimePointMultiplier = 1.6666666666666667 // 100 / 60
+  const minuteTimePointMultiplier = 1.6666666666666667; // 100 / 60
   const timePointsFromString = (timeString) => {
-    if (!timeStringRegex.test(timeString) && timeString !== '24:00')
-      throw new InvalidTimeStringError(timeString)
-    const [hoursInt, minutesInt] = timeString
-      .split(':')
-      .map((time) => parseInt(time, 10))
-    let minutePoints = (minutesInt * minuteTimePointMultiplier).toString()
-    if (minutePoints.split('.')[0].length < 2) minutePoints = `0${minutePoints}`
-    return Number(hoursInt + minutePoints)
-  }
+      if (!timeStringRegex.test(timeString) && timeString !== '24:00')
+          throw new InvalidTimeStringError(timeString);
+      const [hoursInt, minutesInt] = timeString
+          .split(':')
+          .map((time) => parseInt(time, 10));
+      let minutePoints = (minutesInt * minuteTimePointMultiplier).toString();
+      if (minutePoints.split('.')[0].length < 2)
+          minutePoints = `0${minutePoints}`;
+      return Number(hoursInt + minutePoints);
+  };
 
   const dateFromDateTime = (dateTime) => {
-    return dateTime.slice(0, 10)
-  }
+      return dateTime.slice(0, 10);
+  };
   const timeFromDateTime = (dateTime) => {
-    return dateTime.slice(11)
-  }
+      return dateTime.slice(11);
+  };
 
-  var WeekDay
-  ;(function (WeekDay) {
-    WeekDay[(WeekDay['MONDAY'] = 1)] = 'MONDAY'
-    WeekDay[(WeekDay['TUESDAY'] = 2)] = 'TUESDAY'
-    WeekDay[(WeekDay['WEDNESDAY'] = 3)] = 'WEDNESDAY'
-    WeekDay[(WeekDay['THURSDAY'] = 4)] = 'THURSDAY'
-    WeekDay[(WeekDay['FRIDAY'] = 5)] = 'FRIDAY'
-    WeekDay[(WeekDay['SATURDAY'] = 6)] = 'SATURDAY'
-    WeekDay[(WeekDay['SUNDAY'] = 7)] = 'SUNDAY'
-  })(WeekDay || (WeekDay = {}))
+  var WeekDay;
+  (function (WeekDay) {
+      WeekDay[WeekDay["MONDAY"] = 1] = "MONDAY";
+      WeekDay[WeekDay["TUESDAY"] = 2] = "TUESDAY";
+      WeekDay[WeekDay["WEDNESDAY"] = 3] = "WEDNESDAY";
+      WeekDay[WeekDay["THURSDAY"] = 4] = "THURSDAY";
+      WeekDay[WeekDay["FRIDAY"] = 5] = "FRIDAY";
+      WeekDay[WeekDay["SATURDAY"] = 6] = "SATURDAY";
+      WeekDay[WeekDay["SUNDAY"] = 7] = "SUNDAY";
+  })(WeekDay || (WeekDay = {}));
 
-  WeekDay.MONDAY
-  const DEFAULT_EVENT_COLOR_NAME = 'primary'
+  WeekDay.MONDAY;
+  const DEFAULT_EVENT_COLOR_NAME = 'primary';
 
   class CalendarEventImpl {
-    constructor(
-      _config,
-      id,
-      _start,
-      _end,
-      title,
-      people,
-      location,
-      description,
-      calendarId,
-      _options = undefined,
-      _customContent = {},
-      _foreignProperties = {}
-    ) {
-      Object.defineProperty(this, '_config', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: _config,
-      })
-      Object.defineProperty(this, 'id', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: id,
-      })
-      Object.defineProperty(this, '_start', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: _start,
-      })
-      Object.defineProperty(this, '_end', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: _end,
-      })
-      Object.defineProperty(this, 'title', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: title,
-      })
-      Object.defineProperty(this, 'people', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: people,
-      })
-      Object.defineProperty(this, 'location', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: location,
-      })
-      Object.defineProperty(this, 'description', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: description,
-      })
-      Object.defineProperty(this, 'calendarId', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: calendarId,
-      })
-      Object.defineProperty(this, '_options', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: _options,
-      })
-      Object.defineProperty(this, '_customContent', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: _customContent,
-      })
-      Object.defineProperty(this, '_foreignProperties', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: _foreignProperties,
-      })
-      Object.defineProperty(this, '_previousConcurrentEvents', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: void 0,
-      })
-      Object.defineProperty(this, '_totalConcurrentEvents', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: void 0,
-      })
-      Object.defineProperty(this, '_maxConcurrentEvents', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: void 0,
-      })
-      Object.defineProperty(this, '_nDaysInGrid', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: void 0,
-      })
-      Object.defineProperty(this, '_createdAt', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: void 0,
-      })
-      Object.defineProperty(this, '_originalTimezone', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: void 0,
-      })
-      Object.defineProperty(this, '_eventFragments', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: {},
-      })
-      this._originalTimezone =
-        this._start instanceof Temporal.ZonedDateTime
-          ? this._start.timeZoneId
-          : undefined
-    }
-    get start() {
-      if (this._start instanceof Temporal.PlainDate) {
-        return this._start
+      constructor(_config, id, _start, _end, title, people, location, description, calendarId, _options = undefined, _customContent = {}, _foreignProperties = {}) {
+          Object.defineProperty(this, "_config", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: _config
+          });
+          Object.defineProperty(this, "id", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: id
+          });
+          Object.defineProperty(this, "_start", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: _start
+          });
+          Object.defineProperty(this, "_end", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: _end
+          });
+          Object.defineProperty(this, "title", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: title
+          });
+          Object.defineProperty(this, "people", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: people
+          });
+          Object.defineProperty(this, "location", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: location
+          });
+          Object.defineProperty(this, "description", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: description
+          });
+          Object.defineProperty(this, "calendarId", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: calendarId
+          });
+          Object.defineProperty(this, "_options", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: _options
+          });
+          Object.defineProperty(this, "_customContent", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: _customContent
+          });
+          Object.defineProperty(this, "_foreignProperties", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: _foreignProperties
+          });
+          Object.defineProperty(this, "_previousConcurrentEvents", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: void 0
+          });
+          Object.defineProperty(this, "_totalConcurrentEvents", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: void 0
+          });
+          Object.defineProperty(this, "_maxConcurrentEvents", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: void 0
+          });
+          Object.defineProperty(this, "_nDaysInGrid", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: void 0
+          });
+          Object.defineProperty(this, "_createdAt", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: void 0
+          });
+          Object.defineProperty(this, "_originalTimezone", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: void 0
+          });
+          Object.defineProperty(this, "_eventFragments", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: {}
+          });
+          this._originalTimezone =
+              this._start instanceof Temporal.ZonedDateTime
+                  ? this._start.timeZoneId
+                  : undefined;
       }
-      return this._start.withTimeZone(this._config.timezone.value)
-    }
-    set start(value) {
-      this._start =
-        value instanceof Temporal.ZonedDateTime
-          ? value.withTimeZone(this._originalTimezone)
-          : value
-    }
-    get end() {
-      if (this._end instanceof Temporal.PlainDate) {
-        return this._end
+      get start() {
+          if (this._start instanceof Temporal.PlainDate) {
+              return this._start;
+          }
+          return this._start.withTimeZone(this._config.timezone.value);
       }
-      return this._end.withTimeZone(this._config.timezone.value)
-    }
-    set end(value) {
-      this._end =
-        value instanceof Temporal.ZonedDateTime
-          ? value.withTimeZone(this._originalTimezone)
-          : value
-    }
-    get _isSingleDayTimed() {
-      if (
-        this.start instanceof Temporal.PlainDate ||
-        this.end instanceof Temporal.PlainDate
-      )
-        return false
-      const localStartDate = dateFromDateTime(this.start.toString())
-      const localEndDate = dateFromDateTime(this.end.toString())
-      return localStartDate === localEndDate
-    }
-    get _isSingleDayFullDay() {
-      const startDate = dateFromDateTime(this.start.toString())
-      const endDate = dateFromDateTime(this.end.toString())
-      return (
-        startDate === endDate &&
-        this.start instanceof Temporal.PlainDate &&
-        this.end instanceof Temporal.PlainDate
-      )
-    }
-    get _isMultiDayTimed() {
-      if (
-        this.start instanceof Temporal.PlainDate ||
-        this.end instanceof Temporal.PlainDate
-      )
-        return false
-      const startDate = dateFromDateTime(this.start.toString())
-      const endDate = dateFromDateTime(this.end.toString())
-      return startDate !== endDate
-    }
-    get _isMultiDayFullDay() {
-      const startDate = dateFromDateTime(this.start.toString())
-      const endDate = dateFromDateTime(this.end.toString())
-      return (
-        this.start instanceof Temporal.PlainDate &&
-        this.end instanceof Temporal.PlainDate &&
-        startDate !== endDate
-      )
-    }
-    get _isSingleHybridDayTimed() {
-      if (!this._config.isHybridDay) return false
-      if (
-        this.start instanceof Temporal.PlainDate ||
-        this.end instanceof Temporal.PlainDate
-      )
-        return false
-      const startDate = dateFromDateTime(this.start.toString())
-      const endDate = dateFromDateTime(this.end.toString())
-      const endDateMinusOneDay = toDateString(
-        Temporal.PlainDate.from(endDate).subtract({ days: 1 })
-      )
-      if (startDate !== endDate && startDate !== endDateMinusOneDay)
-        return false
-      const dayBoundaries = this._config.dayBoundaries.value
-      const eventStartTimePoints = timePointsFromString(
-        timeFromDateTime(this.start.toString())
-      )
-      const eventEndTimePoints = timePointsFromString(
-        timeFromDateTime(this.end.toString())
-      )
-      const eventIsFullyInFirstDayOfBoundary =
-        eventEndTimePoints > eventStartTimePoints && startDate === endDate
-      return (
-        (eventStartTimePoints >= dayBoundaries.start &&
-          (eventEndTimePoints <= dayBoundaries.end ||
-            eventIsFullyInFirstDayOfBoundary)) ||
-        (eventStartTimePoints < dayBoundaries.end &&
-          eventEndTimePoints <= dayBoundaries.end)
-      )
-    }
-    get _color() {
-      if (
-        this.calendarId &&
-        this._config.calendars.value &&
-        this.calendarId in this._config.calendars.value
-      ) {
-        return this._config.calendars.value[this.calendarId].colorName
+      set start(value) {
+          this._start =
+              value instanceof Temporal.ZonedDateTime
+                  ? value.withTimeZone(this._originalTimezone)
+                  : value;
       }
-      return DEFAULT_EVENT_COLOR_NAME
-    }
-    _getForeignProperties() {
-      return this._foreignProperties
-    }
-    _getExternalEvent() {
-      return {
-        id: this.id,
-        start: this._start,
-        end: this._end,
-        title: this.title,
-        people: this.people,
-        location: this.location,
-        description: this.description,
-        calendarId: this.calendarId,
-        _options: this._options,
-        ...this._getForeignProperties(),
+      get end() {
+          if (this._end instanceof Temporal.PlainDate) {
+              return this._end;
+          }
+          return this._end.withTimeZone(this._config.timezone.value);
       }
-    }
+      set end(value) {
+          this._end =
+              value instanceof Temporal.ZonedDateTime
+                  ? value.withTimeZone(this._originalTimezone)
+                  : value;
+      }
+      get _isSingleDayTimed() {
+          if (this.start instanceof Temporal.PlainDate ||
+              this.end instanceof Temporal.PlainDate)
+              return false;
+          const localStartDate = dateFromDateTime(this.start.toString());
+          const localEndDate = dateFromDateTime(this.end.toString());
+          return localStartDate === localEndDate;
+      }
+      get _isSingleDayFullDay() {
+          const startDate = dateFromDateTime(this.start.toString());
+          const endDate = dateFromDateTime(this.end.toString());
+          return (startDate === endDate &&
+              this.start instanceof Temporal.PlainDate &&
+              this.end instanceof Temporal.PlainDate);
+      }
+      get _isMultiDayTimed() {
+          if (this.start instanceof Temporal.PlainDate ||
+              this.end instanceof Temporal.PlainDate)
+              return false;
+          const startDate = dateFromDateTime(this.start.toString());
+          const endDate = dateFromDateTime(this.end.toString());
+          return startDate !== endDate;
+      }
+      get _isMultiDayFullDay() {
+          const startDate = dateFromDateTime(this.start.toString());
+          const endDate = dateFromDateTime(this.end.toString());
+          return (this.start instanceof Temporal.PlainDate &&
+              this.end instanceof Temporal.PlainDate &&
+              startDate !== endDate);
+      }
+      get _isSingleHybridDayTimed() {
+          if (!this._config.isHybridDay)
+              return false;
+          if (this.start instanceof Temporal.PlainDate ||
+              this.end instanceof Temporal.PlainDate)
+              return false;
+          const startDate = dateFromDateTime(this.start.toString());
+          const endDate = dateFromDateTime(this.end.toString());
+          const endDateMinusOneDay = toDateString(Temporal.PlainDate.from(endDate).subtract({ days: 1 }));
+          if (startDate !== endDate && startDate !== endDateMinusOneDay)
+              return false;
+          const dayBoundaries = this._config.dayBoundaries.value;
+          const eventStartTimePoints = timePointsFromString(timeFromDateTime(this.start.toString()));
+          const eventEndTimePoints = timePointsFromString(timeFromDateTime(this.end.toString()));
+          const eventIsFullyInFirstDayOfBoundary = eventEndTimePoints > eventStartTimePoints && startDate === endDate;
+          return ((eventStartTimePoints >= dayBoundaries.start &&
+              (eventEndTimePoints <= dayBoundaries.end ||
+                  eventIsFullyInFirstDayOfBoundary)) ||
+              (eventStartTimePoints < dayBoundaries.end &&
+                  eventEndTimePoints <= dayBoundaries.end));
+      }
+      get _color() {
+          if (this.calendarId &&
+              this._config.calendars.value &&
+              this.calendarId in this._config.calendars.value) {
+              return this._config.calendars.value[this.calendarId].colorName;
+          }
+          return DEFAULT_EVENT_COLOR_NAME;
+      }
+      _getForeignProperties() {
+          return this._foreignProperties;
+      }
+      _getExternalEvent() {
+          return {
+              id: this.id,
+              start: this._start,
+              end: this._end,
+              title: this.title,
+              people: this.people,
+              location: this.location,
+              description: this.description,
+              calendarId: this.calendarId,
+              _options: this._options,
+              ...this._getForeignProperties(),
+          };
+      }
   }
 
   class CalendarEventBuilder {
-    constructor(_config, id, start, end) {
-      Object.defineProperty(this, '_config', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: _config,
-      })
-      Object.defineProperty(this, 'id', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: id,
-      })
-      Object.defineProperty(this, 'start', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: start,
-      })
-      Object.defineProperty(this, 'end', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: end,
-      })
-      Object.defineProperty(this, 'people', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: void 0,
-      })
-      Object.defineProperty(this, 'location', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: void 0,
-      })
-      Object.defineProperty(this, 'description', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: void 0,
-      })
-      Object.defineProperty(this, 'title', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: void 0,
-      })
-      Object.defineProperty(this, 'calendarId', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: void 0,
-      })
-      Object.defineProperty(this, '_foreignProperties', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: {},
-      })
-      Object.defineProperty(this, '_options', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: undefined,
-      })
-      Object.defineProperty(this, '_customContent', {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value: {},
-      })
-    }
-    build() {
-      return new CalendarEventImpl(
-        this._config,
-        this.id,
-        this.start,
-        this.end,
-        this.title,
-        this.people,
-        this.location,
-        this.description,
-        this.calendarId,
-        this._options,
-        this._customContent,
-        this._foreignProperties
-      )
-    }
-    withTitle(title) {
-      this.title = title
-      return this
-    }
-    withPeople(people) {
-      this.people = people
-      return this
-    }
-    withLocation(location) {
-      this.location = location
-      return this
-    }
-    withDescription(description) {
-      this.description = description
-      return this
-    }
-    withForeignProperties(foreignProperties) {
-      this._foreignProperties = foreignProperties
-      return this
-    }
-    withCalendarId(calendarId) {
-      this.calendarId = calendarId
-      return this
-    }
-    withOptions(options) {
-      this._options = options
-      return this
-    }
-    withCustomContent(customContent) {
-      this._customContent = customContent
-      return this
-    }
+      constructor(_config, id, start, end) {
+          Object.defineProperty(this, "_config", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: _config
+          });
+          Object.defineProperty(this, "id", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: id
+          });
+          Object.defineProperty(this, "start", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: start
+          });
+          Object.defineProperty(this, "end", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: end
+          });
+          Object.defineProperty(this, "people", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: void 0
+          });
+          Object.defineProperty(this, "location", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: void 0
+          });
+          Object.defineProperty(this, "description", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: void 0
+          });
+          Object.defineProperty(this, "title", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: void 0
+          });
+          Object.defineProperty(this, "calendarId", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: void 0
+          });
+          Object.defineProperty(this, "_foreignProperties", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: {}
+          });
+          Object.defineProperty(this, "_options", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: undefined
+          });
+          Object.defineProperty(this, "_customContent", {
+              enumerable: true,
+              configurable: true,
+              writable: true,
+              value: {}
+          });
+      }
+      build() {
+          return new CalendarEventImpl(this._config, this.id, this.start, this.end, this.title, this.people, this.location, this.description, this.calendarId, this._options, this._customContent, this._foreignProperties);
+      }
+      withTitle(title) {
+          this.title = title;
+          return this;
+      }
+      withPeople(people) {
+          this.people = people;
+          return this;
+      }
+      withLocation(location) {
+          this.location = location;
+          return this;
+      }
+      withDescription(description) {
+          this.description = description;
+          return this;
+      }
+      withForeignProperties(foreignProperties) {
+          this._foreignProperties = foreignProperties;
+          return this;
+      }
+      withCalendarId(calendarId) {
+          this.calendarId = calendarId;
+          return this;
+      }
+      withOptions(options) {
+          this._options = options;
+          return this;
+      }
+      withCustomContent(customContent) {
+          this._customContent = customContent;
+          return this;
+      }
   }
 
   const deepCloneEvent = (calendarEvent, $app) => {
-    const calendarEventInternal = new CalendarEventBuilder(
-      $app.config,
-      calendarEvent.id,
-      calendarEvent._start,
-      calendarEvent._end
-    )
-      .withTitle(calendarEvent.title)
-      .withPeople(calendarEvent.people)
-      .withCalendarId(calendarEvent.calendarId)
-      .withForeignProperties(
-        JSON.parse(JSON.stringify(calendarEvent._getForeignProperties()))
-      )
-      .withLocation(calendarEvent.location)
-      .withDescription(calendarEvent.description)
-      .withOptions(calendarEvent._options)
-      .withCustomContent(calendarEvent._customContent)
-      .build()
-    calendarEventInternal._nDaysInGrid = calendarEvent._nDaysInGrid
-    return calendarEventInternal
-  }
+      const calendarEventInternal = new CalendarEventBuilder($app.config, calendarEvent.id, calendarEvent._start, calendarEvent._end)
+          .withTitle(calendarEvent.title)
+          .withPeople(calendarEvent.people)
+          .withCalendarId(calendarEvent.calendarId)
+          .withForeignProperties(JSON.parse(JSON.stringify(calendarEvent._getForeignProperties())))
+          .withLocation(calendarEvent.location)
+          .withDescription(calendarEvent.description)
+          .withOptions(calendarEvent._options)
+          .withCustomContent(calendarEvent._customContent)
+          .build();
+      calendarEventInternal._nDaysInGrid = calendarEvent._nDaysInGrid;
+      return calendarEventInternal;
+  };
 
   const concatenatePeople = (people) => {
-    return people.reduce((acc, person, index) => {
-      if (index === 0) return person
-      if (index === people.length - 1) return `${acc} & ${person}`
-      return `${acc}, ${person}`
-    }, '')
-  }
+      return people.reduce((acc, person, index) => {
+          if (index === 0)
+              return person;
+          if (index === people.length - 1)
+              return `${acc} & ${person}`;
+          return `${acc}, ${person}`;
+      }, '');
+  };
 
   const DateFormats = {
-    DATE_STRING: /^\d{4}-\d{2}-\d{2}$/,
-    DATE_TIME_STRING: /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}$/,
-  }
+      DATE_STRING: /^\d{4}-\d{2}-\d{2}$/,
+      DATE_TIME_STRING: /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}$/,
+  };
 
   class InvalidDateTimeError extends Error {
-    constructor(dateTimeSpecification) {
-      super(`Invalid date time specification: ${dateTimeSpecification}`)
-    }
+      constructor(dateTimeSpecification) {
+          super(`Invalid date time specification: ${dateTimeSpecification}`);
+      }
   }
 
   const toJSDate = (dateTimeSpecification) => {
-    if (
-      !DateFormats.DATE_TIME_STRING.test(dateTimeSpecification) &&
-      !DateFormats.DATE_STRING.test(dateTimeSpecification)
-    )
-      throw new InvalidDateTimeError(dateTimeSpecification)
-    return new Date(
-      Number(dateTimeSpecification.slice(0, 4)),
-      Number(dateTimeSpecification.slice(5, 7)) - 1,
-      Number(dateTimeSpecification.slice(8, 10)),
-      Number(dateTimeSpecification.slice(11, 13)), // for date strings this will be 0
+      if (!DateFormats.DATE_TIME_STRING.test(dateTimeSpecification) &&
+          !DateFormats.DATE_STRING.test(dateTimeSpecification))
+          throw new InvalidDateTimeError(dateTimeSpecification);
+      return new Date(Number(dateTimeSpecification.slice(0, 4)), Number(dateTimeSpecification.slice(5, 7)) - 1, Number(dateTimeSpecification.slice(8, 10)), Number(dateTimeSpecification.slice(11, 13)), // for date strings this will be 0
       Number(dateTimeSpecification.slice(14, 16)) // for date strings this will be 0
-    )
-  }
+      );
+  };
   const toIntegers = (dateTimeSpecification) => {
-    const hours = dateTimeSpecification.slice(11, 13),
-      minutes = dateTimeSpecification.slice(14, 16)
-    return {
-      year: Number(dateTimeSpecification.slice(0, 4)),
-      month: Number(dateTimeSpecification.slice(5, 7)) - 1,
-      date: Number(dateTimeSpecification.slice(8, 10)),
-      hours: hours !== '' ? Number(hours) : undefined,
-      minutes: minutes !== '' ? Number(minutes) : undefined,
-    }
-  }
+      const hours = dateTimeSpecification.slice(11, 13), minutes = dateTimeSpecification.slice(14, 16);
+      return {
+          year: Number(dateTimeSpecification.slice(0, 4)),
+          month: Number(dateTimeSpecification.slice(5, 7)) - 1,
+          date: Number(dateTimeSpecification.slice(8, 10)),
+          hours: hours !== '' ? Number(hours) : undefined,
+          minutes: minutes !== '' ? Number(minutes) : undefined,
+      };
+  };
 
   const dateFn = (dateTime, locale) => {
-    return dateTime.toLocaleString(locale, {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric',
-    })
-  }
+      return dateTime.toLocaleString(locale, {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric',
+      });
+  };
   const timeFn = (dateTime, locale) => {
-    const dateTimeString = dateTime.toString()
-    const { year, month, date, hours, minutes } = toIntegers(dateTimeString)
-    return new Date(year, month, date, hours, minutes).toLocaleTimeString(
-      locale,
-      {
-        hour: 'numeric',
-        minute: 'numeric',
+      const dateTimeString = dateTime.toString();
+      const { year, month, date, hours, minutes } = toIntegers(dateTimeString);
+      return new Date(year, month, date, hours, minutes).toLocaleTimeString(locale, {
+          hour: 'numeric',
+          minute: 'numeric',
+      });
+  };
+  const getTimeStamp = (calendarEvent, // to facilitate testing. In reality, we will always have a full CalendarEventInternal
+  locale, delimiter = '\u2013') => {
+      var _a, _b, _c, _d;
+      const eventTime = { start: calendarEvent.start, end: calendarEvent.end };
+      if (calendarEvent._isSingleDayFullDay) {
+          return dateFn(eventTime.start, locale);
       }
-    )
-  }
-  const getTimeStamp = (
-    calendarEvent, // to facilitate testing. In reality, we will always have a full CalendarEventInternal
-    locale,
-    delimiter = '\u2013'
-  ) => {
-    var _a, _b, _c, _d
-    const eventTime = { start: calendarEvent.start, end: calendarEvent.end }
-    if (calendarEvent._isSingleDayFullDay) {
-      return dateFn(eventTime.start, locale)
-    }
-    if (calendarEvent._isMultiDayFullDay) {
-      return `${dateFn(eventTime.start, locale)} ${delimiter} ${dateFn(eventTime.end, locale)}`
-    }
-    if (
-      calendarEvent._isSingleDayTimed &&
-      ((_a = eventTime.start) === null || _a === void 0
-        ? void 0
-        : _a.toString()) !==
-        ((_b = eventTime.end) === null || _b === void 0
-          ? void 0
-          : _b.toString())
-    ) {
-      return `${dateFn(eventTime.start, locale)} <span aria-hidden="true">⋅</span> ${timeFn(eventTime.start, locale)} ${delimiter} ${timeFn(eventTime.end, locale)}`
-    }
-    if (
-      calendarEvent._isSingleDayTimed &&
-      ((_c = calendarEvent.start) === null || _c === void 0
-        ? void 0
-        : _c.toString()) ===
-        ((_d = calendarEvent.end) === null || _d === void 0
-          ? void 0
-          : _d.toString())
-    ) {
-      return `${dateFn(eventTime.start, locale)}, ${timeFn(eventTime.start, locale)}`
-    }
-    return `${dateFn(eventTime.start, locale)}, ${timeFn(eventTime.start, locale)} ${delimiter} ${dateFn(eventTime.end, locale)}, ${timeFn(eventTime.end, locale)}`
-  }
+      if (calendarEvent._isMultiDayFullDay) {
+          return `${dateFn(eventTime.start, locale)} ${delimiter} ${dateFn(eventTime.end, locale)}`;
+      }
+      if (calendarEvent._isSingleDayTimed &&
+          ((_a = eventTime.start) === null || _a === void 0 ? void 0 : _a.toString()) !== ((_b = eventTime.end) === null || _b === void 0 ? void 0 : _b.toString())) {
+          return `${dateFn(eventTime.start, locale)} <span aria-hidden="true">⋅</span> ${timeFn(eventTime.start, locale)} ${delimiter} ${timeFn(eventTime.end, locale)}`;
+      }
+      if (calendarEvent._isSingleDayTimed &&
+          ((_c = calendarEvent.start) === null || _c === void 0 ? void 0 : _c.toString()) === ((_d = calendarEvent.end) === null || _d === void 0 ? void 0 : _d.toString())) {
+          return `${dateFn(eventTime.start, locale)}, ${timeFn(eventTime.start, locale)}`;
+      }
+      return `${dateFn(eventTime.start, locale)}, ${timeFn(eventTime.start, locale)} ${delimiter} ${dateFn(eventTime.end, locale)}, ${timeFn(eventTime.end, locale)}`;
+  };
 
   /**
    * Can be used for generating a random id for an entity
    * Should, however, never be used in potentially resource intense loops,
    * since the performance cost of this compared to new Date().getTime() is ca x4 in v8
    * */
-  const randomStringId = () => 's' + Math.random().toString(36).substring(2, 11)
+  const randomStringId = () => 's' + Math.random().toString(36).substring(2, 11);
 
   const addMonths = (to, nMonths) => {
-    if (nMonths < 0) {
-      return to.subtract({ months: -nMonths })
-    }
-    return to.add({ months: nMonths })
-  }
+      if (nMonths < 0) {
+          return to.subtract({ months: -nMonths });
+      }
+      return to.add({ months: nMonths });
+  };
   const addDays = (to, nDays) => {
-    if (nDays < 0) {
-      return to.subtract({ days: -nDays })
-    }
-    return to.add({ days: nDays })
-  }
+      if (nDays < 0) {
+          return to.subtract({ days: -nDays });
+      }
+      return to.add({ days: nDays });
+  };
   /**
    * @deprecated
    *
    * was kept during Temporal migration, to reduce risk in recurrence package, which internally still uses non-Temporal formats
    */
   const __deprecated__addMinutes = (to, nMinutes) => {
-    const { year, month, date, hours, minutes } = toIntegers(to)
-    const isDateTimeString = hours !== undefined && minutes !== undefined
-    const jsDate = new Date(
-      year,
-      month,
-      date,
-      hours !== null && hours !== void 0 ? hours : 0,
-      minutes !== null && minutes !== void 0 ? minutes : 0
-    )
-    jsDate.setMinutes(jsDate.getMinutes() + nMinutes)
-    if (isDateTimeString) {
-      return __deprecated__jsDatetToDateTimeString(jsDate)
-    }
-    return __deprecated__jsDateToDateString(jsDate)
-  }
+      const { year, month, date, hours, minutes } = toIntegers(to);
+      const isDateTimeString = hours !== undefined && minutes !== undefined;
+      const jsDate = new Date(year, month, date, hours !== null && hours !== void 0 ? hours : 0, minutes !== null && minutes !== void 0 ? minutes : 0);
+      jsDate.setMinutes(jsDate.getMinutes() + nMinutes);
+      if (isDateTimeString) {
+          return __deprecated__jsDatetToDateTimeString(jsDate);
+      }
+      return __deprecated__jsDateToDateString(jsDate);
+  };
 
-  exports.DescriptionIcon = DescriptionIcon
-  exports.LocationPinIcon = LocationPinIcon
-  exports.TimeIcon = TimeIcon
-  exports.UserIcon = UserIcon
-  exports.addDays = addDays
-  exports.addMinutes = __deprecated__addMinutes
-  exports.addMonths = addMonths
-  exports.concatenatePeople = concatenatePeople
-  exports.dateStringRegex = dateStringRegex
-  exports.deepCloneEvent = deepCloneEvent
-  exports.definePlugin = definePlugin
-  exports.getTimeStamp = getTimeStamp
-  exports.randomStringId = randomStringId
-  exports.toDateString = toDateString
-  exports.toDateTimeString = toDateTimeString
-  exports.toJSDate = toJSDate
-  exports.toTimeString = toTimeString
-})
+  exports.DescriptionIcon = DescriptionIcon;
+  exports.LocationPinIcon = LocationPinIcon;
+  exports.TimeIcon = TimeIcon;
+  exports.UserIcon = UserIcon;
+  exports.addDays = addDays;
+  exports.addMinutes = __deprecated__addMinutes;
+  exports.addMonths = addMonths;
+  exports.concatenatePeople = concatenatePeople;
+  exports.dateStringRegex = dateStringRegex;
+  exports.deepCloneEvent = deepCloneEvent;
+  exports.definePlugin = definePlugin;
+  exports.getTimeStamp = getTimeStamp;
+  exports.randomStringId = randomStringId;
+  exports.toDateString = toDateString;
+  exports.toDateTimeString = toDateTimeString;
+  exports.toJSDate = toJSDate;
+  exports.toTimeString = toTimeString;
+
+}));
